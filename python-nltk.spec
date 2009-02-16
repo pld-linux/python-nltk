@@ -4,14 +4,14 @@
 Summary:	Natural Language Toolkit
 Summary(pl.UTF-8):	Przybornik obsługi języków naturalnych (Natural Language Toolkit)
 Name:		python-%{module}
-Version:	0.9
+Version:	0.9.7
 Release:	0.1
 License:	GPL
 Group:		Libraries/Python
-Source0:	http://dl.sourceforge.net/nltk/%{module}-%{version}.tar.gz
-# Source0-md5:	00cec5d3347a6aa69d26553635187f85
+Source0:	http://nltk.googlecode.com/files/%{module}-%{version}.zip
+# Source0-md5:	1ab12810201e1c0b896960aa4db6eb4d
 #Patch0:		%{name}-no-similarity.patch
-URL:		http://nltk.sourceforge.net/
+URL:		http://www.nltk.org/
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
