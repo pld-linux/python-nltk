@@ -6,7 +6,7 @@ Summary:	Natural Language Toolkit
 Summary(pl.UTF-8):	Przybornik obsługi języków naturalnych (Natural Language Toolkit)
 Name:		python-%{module}
 Version:	2.0
-Release:	0.%{pre}.1
+Release:	0.%{pre}.2
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://nltk.googlecode.com/files/%{module}-%{version}%{pre}.zip
@@ -19,6 +19,7 @@ BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	unzip
 %pyrequires_eq	python
+Requires:	python-PyYAML
 Suggests:	python-numpy
 Suggests:	python-matplotlib
 Suggests:	prover9
