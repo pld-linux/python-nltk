@@ -1,39 +1,42 @@
 
-%define	module	nltk
+%define		module	nltk
+%define		pre	b9
 
 Summary:	Natural Language Toolkit
 Summary(pl.UTF-8):	Przybornik obsługi języków naturalnych (Natural Language Toolkit)
 Name:		python-%{module}
-Version:	0.9.8
-Release:	1
+Version:	2.0
+Release:	0.%{pre}.0.1
 License:	GPL
 Group:		Libraries/Python
-Source0:	http://nltk.googlecode.com/files/%{module}-%{version}.zip
-# Source0-md5:	18a6dfd1ff9032f57f905361a453cb32
-#Patch0:		%{name}-no-similarity.patch
+Source0:	http://nltk.googlecode.com/files/%{module}-%{version}%{pre}.zip
+# Source0-md5:	ee983f8023375f2b65aa4607c405a986
 URL:		http://www.nltk.org/
 BuildRequires:	pydoc
 BuildRequires:	python-devel
+BuildRequires:	python-PyYAML
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	unzip
 %pyrequires_eq	python
+Suggests:	python-numpy
+Suggests:	python-matplotlib
+Suggests:	prover9
+#Suggests:	MaltParser: http://w3.msi.vxu.se/~jha/maltparser/dist/malt-1.2.tar.gz
+#Suggests:	MegaM: http://hal3.name/megam/megam_src.tgz
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The Natural Language Toolkit (NLTK-Lite) is a Python module for
-processing natural language text. It was developed as a simpler,
-lightweight version of NLTK.
+The Natural Language Toolkit is a Python module for
+processing natural language text.
 
 %description -l pl.UTF-8
-Natural Language Toolkit (NLTK-Lite) jest modułem języka Python
-przetwarzającym tekst w języku naturalnym. Został on stworzony
-jako prostsza, lekka wersja NLTK.
+Natural Language Toolkit jest modułem języka Python
+przetwarzającym tekst w języku naturalnym.
 
 %prep
-%setup  -q -n %{module}-%{version}
-#%patch0 -p1
+%setup  -q -n %{module}-%{version}%{pre}
 
 %build
 python ./setup.py build
