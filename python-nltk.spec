@@ -1,16 +1,16 @@
 
 %define		module	nltk
-%define		pre	b9
+%define		pre	rc1
 
 Summary:	Natural Language Toolkit
 Summary(pl.UTF-8):	Przybornik obsługi języków naturalnych (Natural Language Toolkit)
 Name:		python-%{module}
-Version:	2.0
-Release:	0.%{pre}.2
+Version:	2.0.1
+Release:	0.%{pre}.1
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://nltk.googlecode.com/files/%{module}-%{version}%{pre}.zip
-# Source0-md5:	ee983f8023375f2b65aa4607c405a986
+# Source0-md5:	72f745eefd659aea23a44bf1e47e7b9d
 URL:		http://www.nltk.org/
 BuildRequires:	pydoc
 BuildRequires:	python-devel
