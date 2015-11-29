@@ -16,7 +16,7 @@ BuildRequires:	pydoc
 BuildRequires:	python-devel
 BuildRequires:	python-PyYAML
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	unzip
 %pyrequires_eq	python
 Requires:	python-PyYAML
